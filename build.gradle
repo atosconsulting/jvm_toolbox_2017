@@ -1,0 +1,17 @@
+// The order of the compilation is: java, grovy, scala - regardless of the order of plugins
+apply plugin: 'java'
+apply plugin: 'groovy'
+// scalac crashes on JDK9 - switched off until solved
+//apply plugin: 'scala'
+
+sourceCompatibility = 1.9
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.+'
+//    compile 'org.scala-lang:scala-library:2.12.+'
+    testCompile 'junit:junit:4.+'
+}
