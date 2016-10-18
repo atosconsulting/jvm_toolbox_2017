@@ -11,16 +11,26 @@ one application:
 Various use cases are demonstrated by unit tests.
 Please look into each test file for more information.
 
-The unit tests are supposed to be run with Gradle 3.x on JDK 9 with
+## Test cases execution
+### Prerequisites
+Successful tests executioin requires the following tools:
+* JDK 9
+* _JDK 8_ (required as long as Gradle crashes on JDK 9)
+* Gradle 3.1+
+
+### Execution
+The unit tests are supposed to be run with Gradle 3.1+ on JDK 9 with
 the following command:
 ```bash
 gradle test
 ```
 
-**Note**: Unfortunately, Gradle 3.1 still crashes on JDK 9 during downloading
+
+Unfortunately, Gradle 3.1 crashes on JDK 9 during downloading
 dependencies. As a workaround it should be initially started on JDK 8
-to download dependencies and then on JDK 9 to compile and execute tests -
-for example:
+to download dependencies and then on JDK 9 to compile and execute tests.
+
+On Unix systems demo can be successfully executed with the following commands:
 ```bash
 export JAVA_HOME=path_to_JDK8
 gradle test

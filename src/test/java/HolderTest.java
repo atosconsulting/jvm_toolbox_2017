@@ -15,8 +15,8 @@ public class HolderTest {
         GroovyHolder gh = new GroovyHolder();
         out.println(gh);
         assertEquals("Skywalker", gh.getSurname());
-        gh.setName("Lea");
+        gh.setName("Leia");
         out.println(gh);
-        assertEquals("Lea", gh.getName());
+        assertEquals("Leia", gh.getName());
     }
 }

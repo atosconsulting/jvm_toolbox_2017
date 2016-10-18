@@ -58,7 +58,7 @@ public class JsonProcessorTest {
 
         out.println( Arrays.toString(results) );
         assertEquals(247, results.length);
-        assertEquals("Afghanistan", results[0]);
-        assertEquals("Zimbabwe", results[246]);
+        assertEquals( "Afghanistan", results[0] );
+        assertEquals( "Zimbabwe", results[ results.length - 1 ] );
     }
 }
